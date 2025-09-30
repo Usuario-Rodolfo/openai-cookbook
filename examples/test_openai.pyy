@@ -1,0 +1,11 @@
+import os
+from dotenv import load_dotenv
+from openai import AsyncOpenAI
+
+# Carrega o .env
+load_dotenv()
+
+# Cria o cliente OpenAI com a chave (nome da variável, não a chave direta)
+client = AsyncOpenAI(api_key=os.environ["OPENAI_API_KEY"])
+
+print("Cliente OpenAI configurado com sucesso!")
